@@ -14,7 +14,7 @@
 
 1. Клонуйте репозиторій:
     ```bash
-    git clone https://your-repository-url.git
+    git clone https://github.com/Eichant/JWT_Protection.git
     ```
 
 2. Перейдіть в директорію проекту:
@@ -64,8 +64,54 @@
     "access_token": "your-jwt-token"
 }
 ```
+### 2. logout
 
-### 2. Отримати список всіх елементів
+**Метод**: `POST`  
+**Маршрут**: `/logout`
+
+**Headers**:
+```Key
+{
+    Authorization
+}
+```
+```Value
+{
+    Bearer your_token
+}
+```
+
+**Відповідь**:
+```json
+{
+    "message": "Successfully logged out."
+}
+```
+### 3. revoke
+
+**Метод**: `POST`  
+**Маршрут**: `/revoke`
+
+**Headers**:
+```Key
+{
+    Authorization
+}
+```
+```Value
+{
+    Bearer your_token
+}
+```
+
+**Відповідь**:
+```json
+{
+    "msg": "Token has been revoked."
+}
+```
+
+### 3. Отримати список всіх елементів
 
 **Метод**: `GET`  
 **Маршрут**: `/item`
@@ -82,7 +128,7 @@
 ]
 ```
 
-### 3. Отримати елемент за ID
+### 4. Отримати елемент за ID
 
 **Метод**: `GET`  
 **Маршрут**: `/item/<item_id>`
@@ -97,7 +143,7 @@
 }
 ```
 
-### 4. Створити новий елемент
+### 5. Створити новий елемент
 
 **Метод**: `POST`  
 **Маршрут**: `/item`
@@ -126,5 +172,5 @@
 - **401 Unauthorized**: Якщо токен відсутній або недійсний.
 - **403 Forbidden**: Якщо токен прострочений.
 - **404 Not Found**: Якщо елемент не знайдено.
-#### Зробив Литвиненко Дмитро
+#### Виконав Черняхівський Володимир І-23
 
