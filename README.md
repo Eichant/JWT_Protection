@@ -69,12 +69,14 @@
 **Метод**: `POST`  
 **Маршрут**: `/logout`
 
-**Headers**:
+**Headers**
+**Key**:
 ```Key
 {
     Authorization
 }
 ```
+**Value**:
 ```Value
 {
     Bearer your_token
@@ -92,12 +94,14 @@
 **Метод**: `POST`  
 **Маршрут**: `/revoke`
 
-**Headers**:
+**Headers**
+**Key**:
 ```Key
 {
     Authorization
 }
 ```
+**Value**:
 ```Value
 {
     Bearer your_token
